@@ -9,10 +9,10 @@ export type DataType = {
 }
 
 export type GetPopulationRequest = {
-  prefCode: string, cityCode: string, addArea:string
+  prefCode: number, cityCode: string, addArea:string
 }
 
 export type GetPopulationResponse = { 
   message: string, 
-  result:{line:{boundaryYear:number, data:DataType[]}}
+  result:{boundaryYear:number, data:DataType[]}
 }
