@@ -1,7 +1,7 @@
 /* CheckBoex's css */
 .checkBoxWrapper {
   display: flex;
-  width: 40%;
+  width: 100%;
   flex-wrap: wrap;
 }
 
@@ -16,6 +16,7 @@
 /* refectures's css*/
 .prefecturesWrapper {
   padding: 0 10px;
+  margin-bottom: 20px;
 }
 
 .prefecturesLabel {
@@ -36,3 +37,4 @@
   margin-bottom: 20px;
   padding: 10px;
 }
+

@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { PrefectureCheckBoxes } from "../../../components/ui/PrefectureCheckBoxes";
 import styles from "../../../lib/css/style.module.css"
 import { useRasas } from "../../../lib/stores";
-import { BackendApiClient } from "../../../lib/api/clients";
 import { getPrefectures } from "../api/getPrefectures";
 
 export const Prefectures = () => {
