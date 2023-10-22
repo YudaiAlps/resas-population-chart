@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { getPopulationAsync } from "../api/getPopulation";
 
 import {
@@ -15,6 +15,7 @@ import dayjs from 'dayjs';
 import { castToPrefectureName, getLineColor, notNull } from "../../../lib/utils";
 import { PopulationData, useRasas } from "../../../lib/stores";
 import { Line } from 'react-chartjs-2'
+import React from "react";
 
 ChartJS.register(
   CategoryScale,

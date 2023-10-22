@@ -2,6 +2,7 @@ import Prefectures from '../../assets/prefectures.json'
 import { useRasas } from '../../lib/stores'
 import { CheckBox } from '../base/CheckBox'
 import styles from '../../lib/css/style.module.css'
+import React from 'react'
 
 export const PrefectureCheckBoxes = () => {
   const prefecture = useRasas((state) => state.prefectures)
