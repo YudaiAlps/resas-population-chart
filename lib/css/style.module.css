@@ -1,0 +1,13 @@
+.checkBoxWrapper {
+  display: flex;
+  width: 40%;
+  flex-wrap: wrap;
+}
+
+.checkBox {
+  display: flex;
+}
+
+.checkBoxLabel {
+  width: 70px;
+}
