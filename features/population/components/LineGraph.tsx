@@ -30,7 +30,7 @@ ChartJS.register(
 export const LineGraph = () => {
   const populations = useRasas((state) => state.populations)
   const addPopulations = useRasas((state) => state.addPopulations)
-  const prefectures = useRasas((state) => state.prefectures)
+  const prefectures = useRasas((state) => state.selectedPrefectures)
   const today = dayjs()
 
   useEffect(() => {

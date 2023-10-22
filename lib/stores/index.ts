@@ -1,4 +1,5 @@
 import {create} from 'zustand'
+import { PrefectureData } from '../api/types/getPrefectures'
 
 export type PopulationData= {
   label: string
@@ -7,7 +8,8 @@ export type PopulationData= {
 }
 
 export type State = {
-  prefectures: number[]
+  prefectures: PrefectureData[]
+  selectedPrefectures: number[]
   populations:  PopulationData[]
 }
 
@@ -16,25 +18,30 @@ type Actions = {
   removePref: (pref:number) => void
   initPref: () => void
   addPopulations: (populationInfo: PopulationData[]) => void
+  setPrefectures: (prefectures: PrefectureData[]) => void
 }
 
 const initState:State = {
   prefectures: [],
+  selectedPrefectures: [],
   populations: []
 }
 
 export const useRasas = create<State & Actions>()((set, get) => ({
   ...initState,
   addPref: (pref:number) => {
-    set({prefectures: [...get().prefectures, pref]})
+    set({selectedPrefectures: [...get().selectedPrefectures, pref]})
   },
   removePref: (pref: number) => {
-    set({prefectures: get().prefectures.filter(pre => pre !== pref)})
+    set({selectedPrefectures: get().selectedPrefectures.filter(pre => pre !== pref)})
   },
   initPref: () => {
     set(initState)
   },
   addPopulations: (populationInfo) => {
-    set({populations: [...populationInfo]})
+    set({populations: populationInfo})
+  },
+  setPrefectures: (prefectures) => {
+    set({prefectures})
   }
 }))
