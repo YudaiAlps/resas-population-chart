@@ -1,3 +1,4 @@
+import React from "react";
 import { PrefectureCheckBoxes } from "../components/ui/PrefectureCheckBoxes";
 import { LineGraph } from "../features/population/components/LineGraph";
 
