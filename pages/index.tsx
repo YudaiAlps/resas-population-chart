@@ -1,11 +1,14 @@
-import { PrefectureCheckBoxes } from "../components/ui/PrefectureCheckBoxes";
-import { LineGraph } from "../features/population/components/LineGraph";
+import React from "react"
+import { LineGraph } from "../features/population/components/LineGraph"
+import { Prefectures } from "../features/prefecture/components/Prefectures"
+import { Header } from "../components/ui/Header"
 
-export default  function Home() {
+export default  function Main() {
 
   return (
     <>
-      <PrefectureCheckBoxes />
+      <Header />
+      <Prefectures />
       <LineGraph />
     </>
   )

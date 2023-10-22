@@ -1,3 +1,5 @@
+import React from "react"
+
 type Prop = {
   value: string | number
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
