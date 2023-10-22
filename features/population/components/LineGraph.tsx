@@ -15,7 +15,7 @@ import dayjs from 'dayjs';
 import { castToPrefectureName, getLineColor, notNull } from "../../../lib/utils";
 import { PopulationData, useRasas } from "../../../lib/stores";
 import { Line } from 'react-chartjs-2'
-import React from "react";
+import React from "react"
 
 ChartJS.register(
   CategoryScale,
@@ -62,12 +62,31 @@ export const LineGraph = () => {
   ]
   const graphData = {
     labels,
-    datasets: populations
+    datasets: populations,
+    fill: true,
   }
 
+  const options = {
+    scales: {
+      x:{
+          display: true,
+          title:{
+            display: true,
+            text: '年度',
+          },
+      },
+      y:{
+          display: true,
+          title:{
+              display: true,
+              text: '人口数'
+          },
+        }
+      }
+  }
   return (
     <div>
-      <Line data={graphData} />
+      <Line data={graphData} options={options} />
     </div>
   )
 }

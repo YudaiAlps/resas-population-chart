@@ -1,0 +1,13 @@
+import { LineGraph } from "../../../features/population/components/LineGraph"
+import { Prefectures } from "../../../features/prefecture/components/Prefectures"
+import { Header } from "../../ui/Header"
+
+export const MobileChartComponent = () => {
+  return (
+    <>
+      <Header />
+      <Prefectures />
+      <LineGraph />
+    </>
+  )
+}
