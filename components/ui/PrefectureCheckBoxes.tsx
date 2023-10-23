@@ -1,8 +1,7 @@
-import Prefectures from '../../assets/prefectures.json'
-import { useRasas } from '../../lib/stores'
-import { CheckBox } from '../base/CheckBox'
-import styles from '../../lib/css/style.module.css'
 import React from 'react'
+import { CheckBox } from '@/components/base/CheckBox'
+import styles from '@/lib/css/style.module.css'
+import { useRasas } from '@/lib/stores'
 
 export const PrefectureCheckBoxes = () => {
   const prefecture = useRasas((state) => state.prefectures)
@@ -10,29 +9,22 @@ export const PrefectureCheckBoxes = () => {
   const addPrefecture = useRasas((state) => state.addPref)
   const removePrefecture = useRasas((state) => state.removePref)
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (selectedPrefectures.find(pre => pre === parseInt(e.target.value))) {
+    if (selectedPrefectures.find((pre) => pre === parseInt(e.target.value))) {
       removePrefecture(parseInt(e.target.value))
       return
     }
     addPrefecture(parseInt(e.target.value))
   }
-  const prefectures = prefecture.map((prefecture: {prefCode:number, prefName: string}) => {
+  const prefectures = prefecture.map((prefecture: { prefCode: number; prefName: string }) => {
     return (
-      <div  key={prefecture.prefCode}>
+      <div key={prefecture.prefCode}>
         <label className={styles.checkBox}>
           <CheckBox value={prefecture.prefCode} onChange={(e) => onChange(e)} />
-          <div className={styles.checkBoxLabel}>
-          {prefecture.prefName}
-          </div>
+          <div className={styles.checkBoxLabel}>{prefecture.prefName}</div>
         </label>
       </div>
     )
   })
-  
-  return (
-    <div className={styles.checkBoxWrapper}>
-      {prefectures}
-    </div>
-  )
-}
 
+  return <div className={styles.checkBoxWrapper}>{prefectures}</div>
+}

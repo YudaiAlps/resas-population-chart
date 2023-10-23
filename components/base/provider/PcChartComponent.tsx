@@ -1,6 +1,6 @@
-import { LineGraph } from "../../../features/population/components/LineGraph"
-import { Prefectures } from "../../../features/prefecture/components/Prefectures"
-import { Header } from "../../ui/Header"
+import { Header } from '@/components/ui/Header'
+import { LineGraph } from '@/features/population/components/LineGraph'
+import { Prefectures } from '@/features/prefecture/components/Prefectures'
 
 export const PcChartComponent = () => {
   return (

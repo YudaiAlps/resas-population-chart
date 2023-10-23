@@ -1,12 +1,22 @@
 {
   "extends": [
-    "airbnb",
-    "plugin:@typescript-eslint/recommended",
-    "airbnb-typescript",
     "next/core-web-vitals",
+    "plugin:import/recommended",
+    "plugin:import/warnings",
     "prettier"
   ],
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ]
+  },
   "parserOptions": {
     "project": "./tsconfig.json"
-  }
+  },
+  "plugins": ["import", "react", "jsx-a11y"]
 }
