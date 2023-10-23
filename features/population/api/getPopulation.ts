@@ -1,5 +1,5 @@
-import { BackendApiClient } from '../../../lib/api/clients'
-import { GetPopulationRequest, GetPopulationResponse } from '../../../lib/api/types/getPopulations'
+import { BackendApiClient } from '@/lib/api/clients'
+import { GetPopulationRequest, GetPopulationResponse } from '@/lib/api/types/getPopulations'
 
 export const getPopulationAsync = async (
   request: Partial<GetPopulationRequest>,
