@@ -13,12 +13,12 @@ const GlobalStyle = createGlobalStyle`
 function App() {
   return (
     <>
-    <MediaQueryProvider>
-      <GlobalStyle />
-      <MainComponent />
-    </MediaQueryProvider>
+      <MediaQueryProvider>
+        <GlobalStyle />
+        <MainComponent />
+      </MediaQueryProvider>
     </>
-  ) 
+  )
 }
 
 export default App

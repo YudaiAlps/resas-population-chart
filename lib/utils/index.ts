@@ -4,9 +4,9 @@ export const notNull = <T>(item: T | null | undefined): item is T => {
 }
 
 export const getLineColor = (prefectureCode: number) => {
-  return prefectureData.prefectures.find(pref => pref.code === prefectureCode)?.color || ''
+  return prefectureData.prefectures.find((pref) => pref.code === prefectureCode)?.color || ''
 }
 
 export const castToPrefectureName = (prefectureCode: number) => {
-  return prefectureData.prefectures.find(pref => pref.code === prefectureCode)?.name || ''
+  return prefectureData.prefectures.find((pref) => pref.code === prefectureCode)?.name || ''
 }
