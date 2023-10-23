@@ -1,4 +1,4 @@
-import prefectureData from '../../assets/prefectures.json'
+import prefectureData from '@/assets/prefectures.json'
 export const notNull = <T>(item: T | null | undefined): item is T => {
   return item !== null && item !== undefined
 }

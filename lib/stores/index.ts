@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { PrefectureData } from '../api/types/getPrefectures'
+import { PrefectureData } from '@/lib/api/types/getPrefectures'
 
 export type PopulationData = {
   label: string
