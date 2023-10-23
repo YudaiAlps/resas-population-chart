@@ -1,5 +1,4 @@
 import React from 'react'
-import { AppProps } from 'next/app'
 import { createGlobalStyle } from 'styled-components'
 import reset from 'styled-reset'
 import { MediaQueryProvider } from '../components/base/provider/mediaQueryProvider'

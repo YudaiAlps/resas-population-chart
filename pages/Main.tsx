@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
-import { useMediaQueryContext } from '@/components/base/provider/mediaQueryProvider'
 import { MobileChartComponent } from '@/components/base/provider/MobileChartComponent'
 import { PcChartComponent } from '@/components/base/provider/PcChartComponent'
+import { useMediaQueryContext } from '@/components/base/provider/mediaQueryProvider'
 
 const MainComponent: FC = () => {
   const { isMobileSite, isPcSite } = useMediaQueryContext()
